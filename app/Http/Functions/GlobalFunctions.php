@@ -40,9 +40,10 @@ use Illuminate\Support\Facades\DB;
     public static function first_global_function() {
         //function logic
         $smartAds =  SmartAd::inRandomOrder()->paginate(1);
-      //  DB::table('smart_ads')->increment('views');
-        $isAdsClicks = request('is-ads-clicks');
-
+         DB::table('smart_ads')->increment('views');
+        $isAdsClicks = request("is-ads-clicks");
+       // $smartAds = SmartAd::increment('views');
+          DB::table('smart_ads')->increment('clicks');
         if($isAdsClicks){
             $smartAds = SmartAd::increment('clicks');
      //  DB::table('smart_ads')->increment('clicks');
@@ -56,8 +57,8 @@ use Illuminate\Support\Facades\DB;
     {
           //function logic
          // $smartAds =  SmartAd::inRandomOrder()->paginate(10);
-          $smartAds = SmartAd::increment('views');
-         // DB::table('smart_ads')->increment('views');
+         // $smartAds = SmartAd::increment('views'); 
+        // DB::table('smart_ads')->increment('views');
          // DB::table('smart_ads')->increment('clicks');
          // $totalClicks = SmartAd::sum('clicks');
          // $totalViews = SmartAd::sum('views');

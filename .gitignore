@@ -7,6 +7,7 @@
 Thumbs.db
 /bower_components
 .env
+.env.example
 .env.backup
 /.idea
 /.vscode
