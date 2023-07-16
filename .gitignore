@@ -1,13 +1,11 @@
 /node_modules
 .DS_Store
-Thumbs.db
 .env
 .env.example 
 /.idea
 /.vscode
 /.vagrant 
 npm-debug.log
-sftp-config.json
 .phpstorm.meta.php
 /.history
 __MACOSX 
@@ -15,5 +13,5 @@ __MACOSX
  
 /log
  
-/.scribe
-/.env.testing
+.scribe
+.env.testing
